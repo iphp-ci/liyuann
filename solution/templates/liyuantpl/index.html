@@ -1,0 +1,86 @@
+{template "header.html"}
+</head>
+<body>
+
+<div class="animationload">
+<div class="loader">Loading...</div>
+</div>    
+     {template "top.html"}    
+     {template "nav.html"}
+ <!-- 解决方案 -->
+ <section class="post-wrapper-top jt-shadow clearfix">
+        <div class="container">
+            <div class="col-lg-12">
+                <h2>解决方案团队</h2>
+                <ul class="breadcrumb pull-right">
+                    <li><i class="fa fa-arrow-circle-left"></i>&nbsp;<a href="{SITE_URL}">{om_block(20)}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+ </section><!-- end post-wrapper-top -->
+ 
+<section class="white-wrapper">
+        <div class="container">
+            <div class="general-title">
+                <h2>我们的团队成员</h2>
+                <hr>
+                <p class="lead">每个行为都是一种沟通方式。因为行为没有相反物（不存在非行为的行为），所以您不可能不沟通。</p>
+            </div><!-- end general title -->
+            
+            <div class="padding-top text-center">
+                {list action=module module=team flag=1  field=title,thumb,position,profile order=displayorder,updatetime num=4}
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 {if $key=0}first{/if}{if $key=3}last{/if}">
+                    <div class="team_member">
+                        <div class="entry">
+                            <img class="img-responsive" src="{dr_thumb($t.thumb)}" alt="">
+                            <div class="magnifier">
+                                <div class="buttons">
+                                    <a class="sf" rel="bookmark" href="mailto:{$t.email}"><span class="fa fa-envelope"></span></a>
+                                    <a class="sf" rel="bookmark" href="#"><span class="fa fa-google-plus"></span></a>
+                                    <a class="st" rel="bookmark" href="#"><span class="fa fa-twitter"></span></a>
+                                    <a class="sg" rel="bookmark" href="#"><span class="fa fa-facebook"></span></a>
+                                </div>
+                            </div><!-- end magnifier -->
+                        </div><!-- end entry -->
+                        <h3>{$t.title} <span>|</span> <small>{$t.position} </small></h3>
+                        <p>{$t.profile} </p>
+                    </div><!-- end team_member -->
+                </div><!-- end col-lg-3 -->
+              
+                {/list}
+             
+               
+            </div><!-- end row -->   
+        </div><!-- end container -->
+    </section><!-- end white wrapper -->
+    <!-- 解决方案 end-->
+    
+    
+    {template "footer.html"}
+
+  <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+  <script type="text/javascript" src="{HOME_THEME_PATH}rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+  <script type="text/javascript" src="{HOME_THEME_PATH}rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript">
+    var revapi;
+    jQuery(document).ready(function() {
+        revapi = jQuery('.tp-banner').revolution(
+        {
+            delay:9000,
+            startwidth:1170,
+            startheight:500,
+            hideThumbs:10,
+            fullWidth:"on",
+            forceFullWidth:"on"
+        });
+    }); //ready
+  </script>
+
+
+
+  <!-- Demo Switcher JS -->
+  <script type="text/javascript" src="{HOME_THEME_PATH}switcher/js/fswit.js"></script>
+  <script src="{HOME_THEME_PATH}switcher/js/bootstrap-select.js"></script>
+  
+</body>
+</html>

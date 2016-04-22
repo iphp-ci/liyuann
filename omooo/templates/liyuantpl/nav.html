@@ -1,0 +1,62 @@
+<header id="header-style-1">
+		<div class="container">
+			<div class="navbar yamm navbar-default">
+				<div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    {list action=navigator type=3}
+                    {if $t.id==23}
+                    <a href="{SITE_URL}" class="navbar-brand" style="background: url({dr_thumb($t.thumb)}) no-repeat scroll left center rgba(0, 0, 0, 0);">&nbsp;</a>
+                    {/if}
+                    {/list}
+        		</div><!-- end navbar-header -->
+                
+				<div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a href="{SITE_URL}">首页</a></li>						
+                        <!-- standard drop down -->
+                       {list action=navigator type=0 pid=0}
+                        <li class="dropdown {if $t.css==1}yamm-fw{/if}"><a href="{$t.url}"  {if $t.target}target="_blank"{/if} {if $t.child} data-toggle="dropdown" class="dropdown-toggle"{/if}>{$t.name}
+                        {if $t.child}<div class="arrow-up"></div>{/if}</a>
+                        {if $t.child}
+
+                            <ul class="dropdown-menu" role="menu">
+                               {if $t.css==1}
+                                <li>
+                                    <div class="yamm-content">
+                                        <div class="row">
+                                        {list action=navigator type=0 pid=$t.id return=n2}
+                                            <ul class="col-sm-3">
+                                                <li><a href="{$n2.url}" {if $n2.target}target="_blank"{/if}>{$n2.name}</a></li>
+                                                
+                                                {if $n2.child}
+                                                    {list action=navigator type=0 pid=$n2.id return=n3}
+                                                        <li><a href="{$n3.url}" {if $n3.target}target="_blank"{/if}>{$n3.name}</a></li>
+                                                    {/list}
+                                                {/if}
+                                            </ul>
+                                        {/list}
+                                           
+                                        </div><!-- end row -->
+                                    </div>
+                                </li>
+                                {else}
+                                    {list action=navigator type=0 pid=$t.id return=n2}
+                                    <li><a href="{$n2.url}" {if $n2.target}target="_blank"{/if}>{$n2.name}</a></li>
+                                    {/list}
+
+                               {/if}
+                                
+                               
+                            </ul><!-- end dropdown-menu -->
+                        {/if}
+                        </li><!-- end drop down -->
+                        {/list}
+					</ul><!-- end navbar-nav -->
+				</div><!-- #navbar-collapse-1 -->
+			</div><!-- end navbar yamm navbar-default -->
+		</div><!-- end container -->
+</header><!-- end header-style-1 -->

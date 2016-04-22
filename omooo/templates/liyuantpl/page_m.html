@@ -1,0 +1,229 @@
+{template "header.html"}
+<link href="{HOME_THEME_PATH}css/flexslider.css" rel="stylesheet"> 
+</head>
+<body>
+
+<div class="animationload">
+<div class="loader">Loading...</div>
+</div>    
+     {template "top.html"}    
+     {template "nav.html"}    
+    <section class="post-wrapper-top jt-shadow clearfix">
+        <div class="container">
+            <div class="col-lg-12">
+                <h2>{$name}</h2>
+                <ul class="breadcrumb pull-right">
+                    <li><i class="fa fa-arrow-circle-left"></i>&nbsp;<a href="{SITE_URL}">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </section><!-- end post-wrapper-top -->
+
+    <div class="blog-wrapper">
+        <div class="container">
+            <div id="aboutslider" class="flexslider clearfix">
+                <ul class="slides">
+                {loop $attachment $i $t}
+                    <li><img src="{dr_thumb($t.file)}" class="img-responsive" alt="{$t.title}"></li>
+                {/loop}
+                </ul><!-- end slides -->
+            </div><!-- end slider -->
+                <div class="slider-shadow"></div>
+        </div><!-- end container -->
+    </div><!-- end postwrapper -->
+
+<section class="white-wrapper">
+        <div class="container">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <h3>我们的服务</h3>
+                    <div class="about_tabbed">     
+                        <div class="panel-group" id="accordion2">
+                            <div class="panel panel-default">
+                                <div class="panel-heading active">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">网站建设</a>
+                                    </h4>
+                                </div><!-- end panel-heading -->
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>网站建设,网站制作,网站建设公司,网站制作公司,上海网站建设,上海网站制作,做网站,建网站,上海做网站,上海建网站,做网站公司,建网站公司,上海做网站公司,上海网站设计,上海网络公司</p>
+                                    </div><!-- end panel-body -->
+                                </div><!-- end collapseOne -->
+                            </div><!-- end panel -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">品牌设计</a>
+                                    </h4>
+                                </div><!-- end panel-heading -->
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>每个网站都是一次创造,每一个细节，都不跑调，用心创造，爱摩恩.摩恩很"贵"，想要普通站别找我，高端，精美的，有思想的网站</p>
+                                    </div><!-- end panel-body -->
+                                </div><!-- end collapseOne -->
+                            </div><!-- end panel -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">高端策略</a>
+                                    </h4>
+                                </div><!-- end panel-heading -->
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>定制化网页设计与互动策略,为你打造个性品牌，同心协力，发现价值.以视觉形象为主，互动网站设计方案。突破传统线下广告，摩恩帮您实现网络整合思想</p>
+                                    </div><!-- end panel-body -->
+                                </div><!-- end collapseOne -->
+                            </div><!-- end panel -->
+                        </div><!-- end panel-group -->
+                    </div><!-- end about tabbed -->
+                </div><!-- end widget -->
+            </div><!-- end col-lg-6 -->
+            
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <h3>客户反馈</h3>
+                    <div id="owl-testimonial-widget" class="owl-carousel">
+                        <div class="testimonial-carousel text-center">
+                            <div class="testimonial-wrap">
+                                <p class="lead">"我们不介意你是否美术或设计科班，是否有这证书那资格…… 
+你的作品集才是唯一证明你实力的途径 广告、插画、平面设计、摄影、网页设计、flash动画、视频动画等各类作品都可以。"</p>
+                            </div>
+                            <div class="media">
+                                <img src="{HOME_THEME_PATH}demos/client_01.jpg" alt="" class="img-circle img-responsive">
+                            </div><!-- end entry -->
+                            <div class="testimonial-names">
+                                <h3>小小生</h3>
+                                <a href="javascript:;" class="readmore">前端交互工程师</a>
+                            </div><!-- end testimonial-names -->
+                        </div><!-- end testimonial-carousel -->
+                        <div class="testimonial-carousel text-center">
+                            <div class="testimonial-wrap">
+                                <p class="lead">"如果你爱设计、爱创意，有出众的美感和过剩的灵感 而且一直勤奋地创作了大量作品。那么，你很可能就是我们在找的人."</p>
+                            </div>
+                            <div class="media">
+                                <img src="{HOME_THEME_PATH}demos/client_01.jpg" alt="" class="img-circle img-responsive">
+                            </div><!-- end entry -->
+                            <div class="testimonial-names">
+                                <h3>摩恩网络</h3>
+                                <a href="javascript:;" class="readmore">高端定制建设家园</a>
+                            </div><!-- end testimonial-names -->
+                        </div><!-- end testimonial-carousel -->
+                    </div><!-- end owl-testimonial-widget -->
+                </div><!-- end widget -->
+            </div><!-- end col-lg-6 -->
+        </div><!-- end container -->
+    </section><!-- end grey-wrapper -->
+    <section id="two-parallax" class="parallax" style="background-image: url('{HOME_THEME_PATH}demos/parallax_08.jpg');" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+        <div class="overlay">
+            <div class="container">
+                <div class="stat f-container">
+                    <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="milestone-counter">
+                            <i class="fa fa-user fa-3x"></i>
+                            <span class="highlight">1876</span>
+                            <div class="milestone-details">Clients Working</div>
+                        </div>
+                    </div>
+                    <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="milestone-counter">
+                            <i class="fa fa-coffee fa-3x"></i>
+                            <span class="highlight">176</span>
+                            <div class="milestone-details">Cups of Coffee</div>
+                        </div>
+                    </div>
+                    <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="milestone-counter">
+                            <i class="fa fa-comment fa-3x"></i>
+                            <span class="highlight">20000</span>
+                            <div class="milestone-details">Topics Created</div>
+                        </div>
+                    </div>
+                    <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="milestone-counter">
+                            <i class="fa fa-camera fa-3x"></i>
+                            <span class="highlight">232</span>
+                            <div class="milestone-details">Photos Taken</div>
+                        </div>
+                    </div>
+                </div><!-- stat -->
+            </div><!-- end container -->
+        </div><!-- end overlay -->
+    </section><!-- end transparent-bg -->
+<div class="z-liubai"></div>
+   
+{template "footer.html"}
+  <script type="text/javascript">
+    var revapi;
+    jQuery(document).ready(function() {
+        revapi = jQuery('.tp-banner').revolution(
+        {
+            delay:9000,
+            startwidth:1170,
+            startheight:500,
+            hideThumbs:10,
+            fullWidth:"on",
+            forceFullWidth:"on"
+        });
+    }); //ready
+  </script>
+      
+  <!-- Royal Slider script files -->
+  <script src="{HOME_THEME_PATH}royalslider/jquery.easing-1.3.js"></script>
+  <script src="{HOME_THEME_PATH}royalslider/jquery.royalslider.min.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+      var rsi = $('#slider-in-laptop').royalSlider({
+        autoHeight: false,
+        arrowsNav: false,
+        fadeinLoadedSlide: false,
+        controlNavigationSpacing: 0,
+        controlNavigation: 'bullets',
+        imageScaleMode: 'fill',
+        imageAlignCenter: true,
+        loop: false,
+        loopRewind: false,
+        numImagesToPreload: 6,
+        keyboardNavEnabled: true,
+        autoScaleSlider: true,  
+        autoScaleSliderWidth: 486,     
+        autoScaleSliderHeight: 315,
+    
+        /* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
+        imgWidth: 792,
+        imgHeight: 479
+    
+      }).data('royalSlider');
+      $('#slider-next').click(function() {
+        rsi.next();
+      });
+      $('#slider-prev').click(function() {
+        rsi.prev();
+      });
+    });
+  </script>
+  
+    <!-- FlexSlider JavaScript
+    ================================================== -->
+    <script src="{HOME_THEME_PATH}js/jquery.flexslider.js"></script>
+    <script>
+    (function($) {
+      "use strict";
+        $(window).load(function() {
+            $('#aboutslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                animationLoop: true,
+                slideshow: true,
+                sync: "#carousel"
+            });
+        });
+    })(jQuery);
+    </script>
+  
+  <!-- Demo Switcher JS -->
+  <script type="text/javascript" src="{HOME_THEME_PATH}switcher/js/fswit.js"></script>
+  <script src="{HOME_THEME_PATH}switcher/js/bootstrap-select.js"></script>
+  
+</body>
+</html>

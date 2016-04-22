@@ -1,0 +1,271 @@
+{template "header.html"}
+<link href="{HOME_THEME_PATH}css/flexslider.css" rel="stylesheet"> 
+</head>
+<body>
+
+<div class="animationload">
+<div class="loader">Loading...</div>
+</div>    
+{template "top.html"}    
+     {template "nav.html"}  
+ <!-- 联系我们 -->
+  <section class="post-wrapper-top jt-shadow clearfix">
+        <div class="container">
+            <div class="col-lg-12">
+                <h2>{$name}</h2>
+                <ul class="breadcrumb pull-right">
+                    <li><i class="fa fa-arrow-circle-left"></i>&nbsp;<a href="{SITE_URL}">返回</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </section><!-- end post-wrapper-top -->
+    <section class="white-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="widget margin-top">
+                        <div id="aboutslider" class="flexslider clearfix">
+                            <ul class="slides">
+                            {loop $attachment $i $t}
+                                <li><img src="{dr_thumb($t.file)}" class="img-responsive" alt=""></li>
+                             {/loop}
+                                
+                            </ul><!-- end slides -->
+                            <div class="aboutslider-shadow">
+                                <span class="s1"></span>
+                            </div>
+                        </div><!-- end slider -->
+                    </div><!-- end widget -->
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <div class="">{$content} </div>
+                        <div class="clearfix"></div>
+                    </div><!-- end widget -->
+                </div><!-- end col-lg-6 -->
+            </div><!-- end row --><br>
+        </div><!-- end container -->
+    </section><!-- end postwrapper -->
+    <section class="white-wrapper nopadding">
+        <div class="container">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                <div class="widget padding-top">
+                    <h3>WinSafe Technologies (Shanghai) Co., Ltd</h3>
+                    <p>励元科技(上海)有限公司</p><br>
+                    <div id="accordion-first" class="clearfix">
+                        <div class="accordion" id="accordion2">
+                          <div class="accordion-group">
+                            <div class="accordion-heading">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                                <em class="fa fa-plus icon-fixed-width"></em>工作机会
+                              </a>
+                            </div>
+                            <div id="collapseSix" class="accordion-body collapse">
+                              <div class="accordion-inner">
+                                <p> 正是WinSafe人的无穷智慧和辛勤努力，推动了我们业务不断发展，让WinSafe 在所服务的领域中始终处于领先地位！因此，我们始终将员工视为最重要的财富，并为他们提供最佳的职业发展规划。</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <div class="accordion-heading">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+                                <em class="fa fa-plus icon-fixed-width"></em>最近招聘信息请查阅：
+                              </a>
+                            </div>
+                            <div id="collapseSeven" class="accordion-body collapse">
+                              <div class="accordion-inner">
+                                <p>招聘网站—前程无忧www.51job.com 搜索公司名：励元科技</p>
+                                <p>招聘网站—前程无忧www.zhaopin.com 搜索公司名：励元科技</p><br/>
+                                <p>或在线提交你的简历到：HR@WinSafe.cn</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="accordion-group">
+                            <div class="accordion-heading">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTen">
+                                <em class="fa fa-plus icon-fixed-width"></em>SHENZHEN OFFICE-深圳办公地点
+                              </a>
+                            </div>
+                            <div id="collapseTen" class="accordion-body collapse">
+                              <div class="accordion-inner">
+                                <p>电话 +86 755 28124012   13713849956</p>
+                                <p>传真 +86 755 28124012</p>
+                                <p>邮件 joron.wang@ winsafe.cn</p>
+                              </div>
+                            </div>
+                          </div>  
+                        </div><!-- end accordion -->
+                    </div><!-- end accordion first -->
+                </div><!-- end widget -->
+            </div><!-- end col-lg-6 -->
+            
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                <div class="wow fadeInRight margin-top">
+                    <img class="" src="{dr_thumb($thumb)}" alt="">
+                </div>
+            </div><!-- end col-lg-6 -->
+        </div><!-- end container -->
+    </section><!-- end grey-wrapper -->
+        <div class="clearfix"></div>
+
+        <section class="white-wrapper nopadding">
+            <div class="container">
+            <div class="row padding-top margin-top">
+            <div class="contact_details">
+                <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
+                    <div class="text-center">
+                        <div class="wow swing">
+                            <div class="contact-icon">
+                                <a href="#" class=""> <i class="fa fa-map-marker fa-3x"></i> </a>
+                            </div><!-- end dm-icon-effect-1 -->
+                             <p>
+                             上海市浦东新区张江高科技园区<br/>祖冲之路2277号弄 12号楼 <br/>
+                            <strong>邮编：</strong> 201203
+                             </p>
+                        </div><!-- end service-icon -->
+                    </div><!-- end miniboxes -->
+                </div><!-- end col-lg-4 -->
+                
+                <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
+                    <div class="text-center">
+                        <div class="wow swing">
+                            <div class="contact-icon">
+                                <a href="#" class=""> <i class="fa fa-phone fa-3x"></i> </a>
+                            </div><!-- end dm-icon-effect-1 -->
+                             <p><strong>上海办公电话:</strong> +86 21 68879030<br>
+                            <strong>上海办公传真:</strong> +86 21 68879030</p>
+                        </div><!-- end service-icon -->
+                    </div><!-- end miniboxes -->
+                </div><!-- end col-lg-4 -->  
+
+                <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
+                    <div class="text-center">
+                        <div class="wow swing">
+                            <div class="contact-icon">
+                                <a href="#" class=""> <i class="fa fa-envelope-o fa-3x"></i> </a>
+                            </div><!-- end dm-icon-effect-1 -->
+                             <p>
+                              <strong>人力资源:</strong> HR@winsafe.cn<br>
+                              <strong>技术支持:</strong> support@winsafe.cn<br>
+                              <strong>业务咨询:</strong> sales@winsafe.cn<br>
+                            </p>
+                        </div><!-- end service-icon -->
+                    </div><!-- end miniboxes -->
+                </div><!-- end col-lg-4 -->                  
+            </div><!-- end contact_details -->
+            </div>
+        </div><!-- end margin-top --><br><br>
+
+        </section>
+     <section class="white-wrapper nopadding">        
+        <div class="container">
+        
+        <div class="contact_form">
+        <div id="message"></div>
+            <form id="contactform" action="" name="contactform" method="post">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="姓名" readonly=""> 
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email 邮箱">
+                    <input type="text" name="website" id="website" class="form-control" placeholder="网站"> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" name="subject" id="subject" class="form-control" placeholder="主题">  
+                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="留言内容"></textarea>
+                    <button type="submit" value="SEND" id="submit" class="btn btn-lg btn-primary pull-right">提交留言</button>
+                </div>
+            </form>    
+        </div><!-- end contact-form -->
+        
+        <div class="clearfix"></div>
+        
+        
+        </div><!-- end container -->
+    </section><!-- end map wrapper -->
+ <!-- 联系我们  end-->
+    
+    
+    
+    
+
+  
+    
+    <div class="z-liubai"></div>
+    <!-- footer -->
+    {template "footer.html"}
+    <!-- footer end-->
+  
+  <script type="text/javascript">
+    var revapi;
+    jQuery(document).ready(function() {
+        revapi = jQuery('.tp-banner').revolution(
+        {
+            delay:9000,
+            startwidth:1170,
+            startheight:500,
+            hideThumbs:10,
+            fullWidth:"on",
+            forceFullWidth:"on"
+        });
+    }); //ready
+  </script>
+      
+  <!-- Royal Slider script files -->
+  <script src="{HOME_THEME_PATH}royalslider/jquery.easing-1.3.js"></script>
+  <script src="{HOME_THEME_PATH}royalslider/jquery.royalslider.min.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+      var rsi = $('#slider-in-laptop').royalSlider({
+        autoHeight: false,
+        arrowsNav: false,
+        fadeinLoadedSlide: false,
+        controlNavigationSpacing: 0,
+        controlNavigation: 'bullets',
+        imageScaleMode: 'fill',
+        imageAlignCenter: true,
+        loop: false,
+        loopRewind: false,
+        numImagesToPreload: 6,
+        keyboardNavEnabled: true,
+        autoScaleSlider: true,  
+        autoScaleSliderWidth: 486,     
+        autoScaleSliderHeight: 315,
+    
+        /* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
+        imgWidth: 792,
+        imgHeight: 479
+    
+      }).data('royalSlider');
+      $('#slider-next').click(function() {
+        rsi.next();
+      });
+      $('#slider-prev').click(function() {
+        rsi.prev();
+      });
+    });
+  </script>
+  
+    <!-- FlexSlider JavaScript
+    ================================================== -->
+    <script src="{HOME_THEME_PATH}js/jquery.flexslider.js"></script>
+    <script>
+    (function($) {
+      "use strict";
+        $(window).load(function() {
+            $('#aboutslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                animationLoop: true,
+                slideshow: true,
+                sync: "#carousel"
+            });
+        });
+    })(jQuery);
+    </script>
+
+  <!-- Demo Switcher JS -->
+  <script type="text/javascript" src="{HOME_THEME_PATH}switcher/js/fswit.js"></script>
+  <script src="{HOME_THEME_PATH}switcher/js/bootstrap-select.js"></script>
+  
+</body>
+</html>

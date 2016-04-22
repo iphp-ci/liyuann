@@ -1,0 +1,83 @@
+{template "header.html"}
+</head>
+<body>
+
+<div class="animationload">
+<div class="loader">Loading...</div>
+</div>    
+     {template "top.html"}    
+     {template "nav.html"}
+ <!-- 解决方案 -->
+ <section class="post-wrapper-top jt-shadow clearfix">
+        <div class="container">
+            <div class="col-lg-12">
+                <h2>产品中心</h2>
+                <ul class="breadcrumb pull-right">
+                    <li><i class="fa fa-arrow-circle-left"></i>&nbsp;<a href="{SITE_URL}">{om_block(20)}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+ </section><!-- end post-wrapper-top -->
+ 
+<section class="white-wrapper">
+        <div class="container">
+            <div class="general-title">
+                <h2>我们的产品服务?</h2>
+                <hr>
+                <p class="lead">我们为您的业务提供最佳的解决方案。</p>
+            </div><!-- end general title -->
+            
+            
+              {list action=module  flag=1  field=title,thumb,url order=displayorder,updatetime num=12}
+                <div class="col-lg-4 {if $key==0}first{/if}{if $key==11}last{/if}">
+                <div class="service-with-image">
+                    <div class="entry">
+                        <img src="{dr_thumb($t.thumb)}" alt="" class="img-responsive">
+                        <span class="service-title">
+                            <a href="{$t.url}"><i class="fa fa-user"></i>{$t.title}</a>
+                        </span>
+                    </div><!-- end entry -->
+                    <div class="service-desc">
+                        <p>{$t.descrtion}.</p>
+                        <a href="{$t.url}" class="readmore">Read More...</a>
+                    </div><!-- end service-desc -->
+                </div><!-- end service-with-image -->
+                </div><!-- end col-lg-4 -->
+
+                {/list}{$sql}
+             
+               
+            </div><!-- end row -->   
+        </div><!-- end container -->
+    </section><!-- end white wrapper -->
+    <!-- 解决方案 end-->
+    
+    
+    {template "footer.html"}
+
+  <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+  <script type="text/javascript" src="{HOME_THEME_PATH}rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+  <script type="text/javascript" src="{HOME_THEME_PATH}rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript">
+    var revapi;
+    jQuery(document).ready(function() {
+        revapi = jQuery('.tp-banner').revolution(
+        {
+            delay:9000,
+            startwidth:1170,
+            startheight:500,
+            hideThumbs:10,
+            fullWidth:"on",
+            forceFullWidth:"on"
+        });
+    }); //ready
+  </script>
+
+
+
+  <!-- Demo Switcher JS -->
+  <script type="text/javascript" src="{HOME_THEME_PATH}switcher/js/fswit.js"></script>
+  <script src="{HOME_THEME_PATH}switcher/js/bootstrap-select.js"></script>
+  
+</body>
+</html>
